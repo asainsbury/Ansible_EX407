@@ -40,5 +40,5 @@ test_nodes
 ### Playbooks
 ### Configuration files
 
-# Next Section [01](../01/)
+# Next Section [02](../02/)
 OK, we've mastered the fundamentals, time to move on!

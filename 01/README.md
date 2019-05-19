@@ -8,7 +8,7 @@ Official Information:
 https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
 
 #### Hosts and Groups
-(a relative link](hosts)
+[a relative link](hosts)
 
 
 ### Modules

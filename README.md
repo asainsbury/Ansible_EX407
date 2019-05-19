@@ -50,7 +50,8 @@ The Repo just creates a whole bunch of stuff in Ansible, and is a great source o
 ### How this works?
 For each list on the overview section, create a separate MD file inside its own folder, with playbook examples running on top of the 3 node Dev environment I mentioned earlier.
 
-Start at [00](00/), which says a bit about how to setup your test VM's, then work your way through the steps which are based on the overview set out by RedHat.
+#### START HERE [00](00/)
+Which says a bit about how to setup your test VM's, then work your way through the steps which are based on the overview set out by RedHat.
 
 ## Overview:
 More here:

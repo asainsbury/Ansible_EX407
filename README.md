@@ -17,6 +17,8 @@ Some notes to help prepare for the EX407 Exam
 I'm totally going to power summarize the following site, and create working examples:
 - https://linuxbuff.wordpress.com/tag/ex407/
 
+As linuxbuff states every so clearly, I'm <strong>not</strong> providing brain-dumps of any papers, or breaking any NDA's. This is just my attempt at recording my journey whilst trying to complete the exam.
+
 ## Aims
 Pass the exam, init?
 
@@ -35,6 +37,8 @@ The Repo just creates a whole bunch of stuff in Ansible, and is a great source o
 - Running vagrant 
 - Running Ansible
 - Using Python(3.x) and pip 
+- Centos basic experience
+- Some Vim foo would probably help
 
 
 ### Environment:
@@ -45,6 +49,8 @@ The Repo just creates a whole bunch of stuff in Ansible, and is a great source o
 
 ### How this works?
 For each list on the overview section, create a separate MD file inside its own folder, with playbook examples running on top of the 3 node Dev environment I mentioned earlier.
+
+Start at 00, which says a bit about how to setup your test VM's, then work your way through the steps 
 
 ## Overview:
 More here:
@@ -93,3 +99,7 @@ https://www.redhat.com/en/services/training/ex407-red-hat-certified-specialist-i
 13. Manage parallelism
 14. Use Ansible Vault in playbooks to protect sensitive data
 15. Use provided documentation to look up specific information about Ansible modules and commands
+
+## Exam Prep
+When I get some intel on how the exam works, I will update this section.
+

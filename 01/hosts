@@ -1,0 +1,18 @@
+[local]
+localhost ansible_connection=local
+
+[dev]
+dev1 ansible_ssh_host=1.1.1.10
+dev2 ansible_ssh_host=1.1.1.11
+dev3 ansible_ssh_host=1.1.1.12
+
+[control]
+dev1 ansible_ssh_host=1.1.1.10
+
+[test_nodes]
+dev2 ansible_ssh_host=1.1.1.11
+dev3 ansible_ssh_host=1.1.1.12
+
+[dev:children]
+control
+test_nodes

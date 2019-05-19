@@ -50,7 +50,7 @@ The Repo just creates a whole bunch of stuff in Ansible, and is a great source o
 ### How this works?
 For each list on the overview section, create a separate MD file inside its own folder, with playbook examples running on top of the 3 node Dev environment I mentioned earlier.
 
-Start at 00, which says a bit about how to setup your test VM's, then work your way through the steps 
+Start at [00](00/), which says a bit about how to setup your test VM's, then work your way through the steps which are based on the overview set out by RedHat.
 
 ## Overview:
 More here:
@@ -101,5 +101,5 @@ https://www.redhat.com/en/services/training/ex407-red-hat-certified-specialist-i
 15. Use provided documentation to look up specific information about Ansible modules and commands
 
 ## Exam Prep
-When I get some intel on how the exam works, I will update this section.
+When I get some Intel on how the exam works, I will update this section.
 

@@ -7,13 +7,18 @@ Insert TOC
 Official Information:
 https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
 
+- Static vs Dynamic inventories are covered in [Section 05](../05/)
+- Variables can be located inside inventories.
+- Group vars can also be contained inside inventories.
+
 <div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../02">next</a> </b>
+    <b><a href="#top">↥ top</a>   |   <a href="../../../">home</a>   |   <a href="../02">next</a> </b>
 </div>
 <br/>
 
+
 #### Hosts and Groups
-Ansible needs a host file, like a duck needs water.
+Ansible needs a host file, like a duck needs water, and it contains groups, and host members. As usual the inventory file is very flexible, and can contain child groups.
 
 This [example](hosts) can be used with our test environment.
 ```bash
@@ -51,7 +56,7 @@ This playbook [show_members.yml](show_members.yml):
 
 Can be run like this: ```ansible-playbook -i hosts show_members.yml```
 
-And produces the following output:
+And produces the following output, showing the group inheritance:
 
 ```bash
 PLAY [all] *************************************************************************************************************************************************************************************************
@@ -92,6 +97,17 @@ localhost                  : ok=1    changed=0    unreachable=0    failed=0
 ```
 <div align="right">
     <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../02">next</a> </b>
+</div>
+<br/>
+
+#### Paths
+- The default inventory is /etc/ansible/hosts
+- Use a custom host file like: ```ansible-playbook -i {path_to_hosts} {playbook_name}```
+- Add a path in the ansible.cfg file, like: ```inventory = inventory_for_this_play```
+- Put the CFG file in the same path as your playbooks for it to take precedent over the defaults
+
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../../../">home</a>   |   <a href="../02">next</a> </b>
 </div>
 <br/>
 

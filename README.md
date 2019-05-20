@@ -19,19 +19,38 @@ I'm totally going to power summarize the following site, and create working exam
 
 As linuxbuff states every so clearly, I'm <strong>not</strong> providing brain-dumps of any papers, or breaking any NDA's. This is just my attempt at recording my journey whilst trying to complete the exam.
 
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../Ansible_EX407">home</a>   |   <a href="../00">next</a> </b>
+</div>
+<br/>
+
 ## Aims
 Pass the exam, init?
+
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../Ansible_EX407">home</a>   |   <a href="../00">next</a> </b>
+</div>
+<br/>
 
 ## Dependencies
 This is operated from a MAC, running brew as my standard development environment.
 I created a specially Vagrantfile years ago, so am kind of stuck on using that to build Centos images, but you could use anything.
 The Repo just creates a whole bunch of stuff in Ansible, and is a great source of information on how certain modules work, but it just sets up the Dev environment super quick and easy.
 
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../Ansible_EX407">home</a>   |   <a href="../00">next</a> </b>
+</div>
+<br/>
+
 ### Packages:
 - Virtual box
 - Terminal client of choice
 - A text editor of choice
 
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../Ansible_EX407">home</a>   |   <a href="../00">next</a> </b>
+</div>
+<br/>
 
 ### Basic Experience:
 - Running vagrant 
@@ -40,6 +59,10 @@ The Repo just creates a whole bunch of stuff in Ansible, and is a great source o
 - Centos basic experience
 - Some Vim foo would probably help
 
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../Ansible_EX407">home</a>   |   <a href="../00">next</a> </b>
+</div>
+<br/>
 
 ### Environment:
 - Pyenv to make virtual environments
@@ -47,11 +70,18 @@ The Repo just creates a whole bunch of stuff in Ansible, and is a great source o
 - 3 Centos Nodes, one of which will become a fresh control node.
 - SSH Key access to all nodes (which is handled by my previous Repo).
 
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../Ansible_EX407">home</a>   |   <a href="../00">next</a> </b>
+</div>
+<br/>
+
 ### How this works?
 Each overview section will have its own folder with links, and example playbooks to run. 
 
-#### START HERE [00](00/)
-Which says a bit about how to setup your test VM's, then work your way through the steps which are based on the overview set out by RedHat.
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../Ansible_EX407">home</a>   |   <a href="../00">next</a> </b>
+</div>
+<br/>
 
 ## Overview:
 More here:
@@ -101,6 +131,23 @@ https://www.redhat.com/en/services/training/ex407-red-hat-certified-specialist-i
 14. Use Ansible Vault in playbooks to protect sensitive data
 15. Use provided documentation to look up specific information about Ansible modules and commands
 
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../Ansible_EX407">home</a>   |   <a href="../00">next</a> </b>
+</div>
+<br/>
+
 ## Exam Prep
 When I get some Intel on how the exam works, I will update this section.
 
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../Ansible_EX407">home</a>   |   <a href="../00">next</a> </b>
+</div>
+<br/>
+
+## START HERE [00](00/)
+Which says a bit about how to setup your test VM's, then work your way through the steps which are based on the overview set out by RedHat.
+
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../Ansible_EX407">home</a>   |   <a href="../00">next</a> </b>
+</div>
+<br/>

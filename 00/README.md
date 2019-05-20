@@ -12,6 +12,11 @@ As we mentioned back on the main page, we need to setup a few things before we c
 - Make sure each node has access to the Internet, so we can download packages and other stuff.
 - I like to call my nodes DEVx, so it might help if you stick to that (slightly boring) standard.
 
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
+</div>
+<br/>
+
 ### Dependencies
 <strong>IF</strong> you do want to follow along, using Vagrant, then make sure you do this:
 
@@ -25,6 +30,11 @@ As we mentioned back on the main page, we need to setup a few things before we c
 
 I'll have to write up how to setup PyEnv for the MAC, but for now, you have to run away and have a go at getting that lot going before we start, otherwise you can just read along, but this isn't meant to be a spectator sport!
 
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
+</div>
+<br/>
+
 ## Setup the Stack
 Summary of steps:
 
@@ -34,6 +44,11 @@ Summary of steps:
 3. Run the playbook to provision the environment.
 4. Run ```vagrant up``` to spin up the 3 VM's
 	- Run vagrant up --provision to restart the bootstrap file at any time.
+
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
+</div>
+<br/>
 
 ### Git clone [Vagrant-Maker](https://github.com/asainsbury/vagrant-maker)
 Vagrant-maker does this:
@@ -60,7 +75,18 @@ vagrant up
 
 I might include the STDOUT produced by the above commands, but for now lets just hope you managed to get it working! Just check connectivity between your laptop and the nodes, by establishing a new SSH session to all. Then in a separate terminal window you can carry on with the rest of the repo.
 
-# Next Section [01](../01/)
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
+</div>
+<br/>
+
+## Next Section [01](../01/)
 OK, ground zero is completed, lets move onto the concepts!
+
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
+</div>
+<br/>
+
 
 

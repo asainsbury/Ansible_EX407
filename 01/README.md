@@ -7,10 +7,15 @@ Insert TOC
 Official Information:
 https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
 
-#### Hosts and Groups
-Ansible needs a host file, like a duck needs water
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../02">next</a> </b>
+</div>
+<br/>
 
-This [example](hosts) can be used with our test environment
+#### Hosts and Groups
+Ansible needs a host file, like a duck needs water.
+
+This [example](hosts) can be used with our test environment.
 ```bash
 [local]
 localhost ansible_connection=local
@@ -32,6 +37,63 @@ control
 test_nodes
 ```
 
+This playbook [show_members.yml](show_members.yml): 
+```yaml
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+  - name: show the groups the host(s) are in
+    debug:
+      msg: "{{group_names}}"
+```
+
+
+Can be run like this: ```ansible-playbook -i hosts show_members.yml```
+
+And produces the following output:
+
+```bash
+PLAY [all] *************************************************************************************************************************************************************************************************
+
+TASK [show the groups the host(s) are in] ******************************************************************************************************************************************************************
+ok: [localhost] => {
+    "msg": [
+        "local"
+    ]
+}
+ok: [dev2] => {
+    "msg": [
+        "dev",
+        "dev_group",
+        "test_nodes"
+    ]
+}
+ok: [dev3] => {
+    "msg": [
+        "dev",
+        "dev_group",
+        "test_nodes"
+    ]
+}
+ok: [dev1] => {
+    "msg": [
+        "control",
+        "dev",
+        "dev_group"
+    ]
+}
+
+PLAY RECAP *************************************************************************************************************************************************************************************************
+dev1                       : ok=1    changed=0    unreachable=0    failed=0
+dev2                       : ok=1    changed=0    unreachable=0    failed=0
+dev3                       : ok=1    changed=0    unreachable=0    failed=0
+localhost                  : ok=1    changed=0    unreachable=0    failed=0
+```
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../02">next</a> </b>
+</div>
+<br/>
 
 ### Modules
 ### Variables

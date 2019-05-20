@@ -1,4 +1,4 @@
-# Part 1 - Understand core components of Ansible
+# Part 01 - Understand core components of Ansible
 A summary of each of the following parts.
 
 Insert TOC
@@ -27,7 +27,7 @@ dev1 ansible_ssh_host=1.1.1.10
 dev2 ansible_ssh_host=1.1.1.11
 dev3 ansible_ssh_host=1.1.1.12
 
-[dev:children]
+[dev_group:children]
 control
 test_nodes
 ```
@@ -39,3 +39,6 @@ test_nodes
 ### Plays
 ### Playbooks
 ### Configuration files
+
+# Next Section [02](../02/)
+OK, we've mastered the fundamentals, time to move on!

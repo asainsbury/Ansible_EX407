@@ -17,7 +17,7 @@ As we mentioned back on the main page, we need to setup a few things before we c
 </div>
 <br/>
 
-### Dependencies
+# Dependencies
 <strong>IF</strong> you do want to follow along, using Vagrant, then make sure you do this:
 
 - Install Virtual box
@@ -30,12 +30,8 @@ As we mentioned back on the main page, we need to setup a few things before we c
 
 I'll have to write up how to setup PyEnv for the MAC, but for now, you have to run away and have a go at getting that lot going before we start, otherwise you can just read along, but this isn't meant to be a spectator sport!
 
-<div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../01_core_components/">next</a> </b>
-</div>
-<br/>
 
-## Setup the Stack
+#### Setup the Stack
 Summary of steps:
 
 0. Complete all the dependencies as outlined above!! 
@@ -45,12 +41,9 @@ Summary of steps:
 4. Run ```vagrant up``` to spin up the 3 VM's
 	- Run vagrant up --provision to restart the bootstrap file at any time.
 
-<div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../01_core_components/">next</a> </b>
-</div>
-<br/>
 
-### Git clone [Vagrant-Maker](https://github.com/asainsbury/vagrant-maker)
+
+#### Git clone [Vagrant-Maker](https://github.com/asainsbury/vagrant-maker)
 Vagrant-maker does this:
 - Stands up 3 Centos VM's
 - Runs a bootstrap process to base line each node.
@@ -80,7 +73,48 @@ I might include the STDOUT produced by the above commands, but for now lets just
 </div>
 <br/>
 
-## Next Section [01 Core Components](../01_core_components//)
+# Test It Works
+Using this command, will test connectivity after you have stood up the VM's:
+
+```bash
+ansible dev -m ping -i ../01_core_components/hosts -u user
+```
+
+Breaking That Down:
+
+- ansible:
+	- Define and run a single task 'playbook' against a set of hosts 
+
+
+
+And product the following output:
+
+```bash
+dev1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+dev3 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+dev2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+```
+
+<strong>NOTE: </strong> Make sure you accept the host keys, when prompted, then after a couple of runs you will be able to run the command.
+
+This is because of the SSH Config file we setup earlier..
+
+
+
+```
+
+```
+
+# Next Section [01 Core Components](../01_core_components//)
 OK, ground zero is completed, lets move onto the concepts!
 
 <div align="right">

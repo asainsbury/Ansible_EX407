@@ -4,14 +4,14 @@ Some notes to help prepare for the EX407 Exam
 - [Ansible_EX407](#ansible-ex407)
   * [Introduction](#introduction)
 - [Chapters in this repo](#chapters-in-this-repo)
-      - [[#00 Setup Vagrant](00_setup_vagrant/)](#--00-setup-vagrant--00-setup-vagrant--)
-      - [[#01 Understand Core Component](01_core_components/)](#--01-understand-core-component--01-core-components--)
-      - [[#99 Further Reading](99_further_reading/)](#--99-further-reading--99-further-reading--)
+      - [00 Setup Vagrant](#-00-setup-vagrant)
+      - [01 Understand Core Component](#-01-understand-core-component)
+      - [99 Further Reading](#-99-further-reading)
 - [Dependencies](#dependencies)
-      - [Packages:](#packages-)
-      - [Basic Experience:](#basic-experience-)
-      - [Environment:](#environment-)
-- [[START HERE](00_setup_vagrant/)](#-start-here--00-setup-vagrant--)
+      - [Packages](#packages)
+      - [Basic Experience](#basic-experience)
+      - [Environment](#environment)
+- [START HERE](#-start-here)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -37,15 +37,15 @@ As I slowly make my way through the RedHat blueprint for this module, more chapt
 This is the offical blueprint, outlining the topics for the [exam](https://www.redhat.com/en/services/training/ex407-red-hat-certified-specialist-in-ansible-automation-exam).
 
 
-#### [#00 Setup Vagrant](00_setup_vagrant/)
+#### [00 Setup Vagrant](00_setup_vagrant/)
 - Start Here! 
 - A lot of good examples are held in this section, but this is how we can setup our test env.
 
 
-#### [#01 Understand Core Component](01_core_components/)
+#### [01 Understand Core Component](01_core_components/)
 - The first chapter
 
-#### [#99 Further Reading](99_further_reading/)
+#### [99 Further Reading](99_further_reading/)
 
 <div align="right">
     <b><a href="#top">↥ top</a>    |   <a href="/00_setup_vagrant/">next</a> </b>
@@ -60,13 +60,13 @@ I created a specially Vagrantfile years ago, so am kind of stuck on using that t
 The Repo just creates a whole bunch of stuff in Ansible, and is a great source of information on how certain modules work, but it just sets up the Dev environment super quick and easy.
 
 
-#### Packages:
+#### Packages
 - Virtual box
 - Terminal client of choice
 - A text editor of choice
 
 
-#### Basic Experience:
+#### Basic Experience
 - Running vagrant 
 - Running Ansible
 - Using Python(3.x) and pip 
@@ -74,7 +74,7 @@ The Repo just creates a whole bunch of stuff in Ansible, and is a great source o
 - Some Vim foo would probably help
 
 
-#### Environment:
+#### Environment
 - Pyenv to make virtual environments
 - Vagrant via https://github.com/asainsbury/vagrant-maker
 - 3 Centos Nodes, one of which will become a fresh control node.

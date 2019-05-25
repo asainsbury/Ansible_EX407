@@ -3,12 +3,15 @@ Some notes to help prepare for the EX407 Exam
 
 - [Ansible_EX407](#ansible-ex407)
   * [Introduction](#introduction)
-  * [Aims](#aims)
-  * [Dependencies](#dependencies)
-    + [Packages:](#packages-)
-    + [Basic Experience:](#basic-experience-)
-    + [Environment:](#environment-)
-  * [Overview:](#overview-)
+- [Chapters in this repo](#chapters-in-this-repo)
+      - [[#00 Setup Vagrant](00_setup_vagrant/)](#--00-setup-vagrant--00-setup-vagrant--)
+      - [[#01 Understand Core Component](01_core_components/)](#--01-understand-core-component--01-core-components--)
+      - [[#99 Further Reading](99_further_reading/)](#--99-further-reading--99-further-reading--)
+- [Dependencies](#dependencies)
+      - [Packages:](#packages-)
+      - [Basic Experience:](#basic-experience-)
+      - [Environment:](#environment-)
+- [[START HERE](00_setup_vagrant/)](#-start-here--00-setup-vagrant--)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 

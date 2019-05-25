@@ -3,7 +3,7 @@ A summary of each of the following parts.
 
 Insert TOC
 
-### Inventories
+## Inventories
 Official Information:
 https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
 
@@ -16,6 +16,16 @@ https://docs.ansible.com/ansible/latest/user_guide/intro_inventory.html
 </div>
 <br/>
 
+#### Paths Influencing the inventory file
+- The default inventory is /etc/ansible/hosts
+- Use a custom host file like: ```ansible-playbook -i {path_to_hosts} {playbook_name}```
+- Add a path in the ansible.cfg file, like: ```inventory = inventory_for_this_play```
+- Put the CFG file in the same path as your playbooks for it to take precedent over the defaults
+
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../../../">home</a>   |   <a href="../02">next</a> </b>
+</div>
+<br/>
 
 #### Hosts and Groups
 Ansible needs a host file, like a duck needs water, and it contains groups, and host members. As usual the inventory file is very flexible, and can contain child groups.
@@ -54,7 +64,11 @@ This playbook [show_members.yml](show_members.yml):
 ```
 
 
-Can be run like this: ```ansible-playbook -i hosts show_members.yml```
+Can be run like this: 
+
+```bash
+ansible-playbook -i hosts show_members.yml
+```
 
 And produces the following output, showing the group inheritance:
 
@@ -95,28 +109,83 @@ dev2                       : ok=1    changed=0    unreachable=0    failed=0
 dev3                       : ok=1    changed=0    unreachable=0    failed=0
 localhost                  : ok=1    changed=0    unreachable=0    failed=0
 ```
+
+Run this command to show the hosts which will run in the playbook:
+
+```bash
+ansible-playbook -i hosts show_members.yml --list-hosts
+```
+
+
+Which nicely shows you the following:
+
+```bash
+playbook: show_members.yml
+
+  play #1 (all): all	TAGS: []
+    pattern: ['all']
+    hosts (4):
+      dev3
+      dev2
+      dev1
+      localhost
+```
+
 <div align="right">
     <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../02">next</a> </b>
 </div>
 <br/>
 
-#### Paths
-- The default inventory is /etc/ansible/hosts
-- Use a custom host file like: ```ansible-playbook -i {path_to_hosts} {playbook_name}```
-- Add a path in the ansible.cfg file, like: ```inventory = inventory_for_this_play```
-- Put the CFG file in the same path as your playbooks for it to take precedent over the defaults
+---
 
+## Modules
 <div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../../../">home</a>   |   <a href="../02">next</a> </b>
+    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../02">next</a> </b>
 </div>
 <br/>
 
-### Modules
-### Variables
-### Facts
-### Plays
-### Playbooks
-### Configuration files
+---
+## Variables
+
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../02">next</a> </b>
+</div>
+<br/>
+
+---
+## Facts
+
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../02">next</a> </b>
+</div>
+<br/>
+
+---
+## Plays
+
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../02">next</a> </b>
+</div>
+<br/>
+
+---
+## Playbooks
+
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../02">next</a> </b>
+</div>
+<br/>
+
+---
+## Configuration files
+
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../02">next</a> </b>
+</div>
+<br/>
+
+---
+
 
 # Next Section [02](../02/)
 OK, we've mastered the fundamentals, time to move on!

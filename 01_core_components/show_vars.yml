@@ -1,0 +1,22 @@
+---
+- hosts: all
+  gather_facts: no
+  
+  # Import a file with some variables
+  vars_files:
+    - some_vars.yml
+  
+  # Play to show what type of variables are inside a play
+  tasks:
+  - name: Dump a load of variables for debugging
+    debug:
+      msg: "{{item}}"
+
+    loop:
+      - "{{vars}}"
+      - "{{environment}}"
+      - "{{group_names}}"
+      - "{{groups}}"
+      - "{{hostvars}}"
+      - "{{some_random_var}}"
+      - "{{ANOTHER_VAR}}"

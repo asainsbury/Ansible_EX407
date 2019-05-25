@@ -1,5 +1,5 @@
 # Part 00 - In the beginning..
-Well you made it this far, well done!.
+Well you made it this far, well done!
 
 ## Introduction
 As we mentioned back on the main page, we need to setup a few things before we can follow along with the examples.  As I've already spent a good amount of time working with Vagrant we can just use a repo I already created to auto generate our test VM's.
@@ -10,10 +10,10 @@ As we mentioned back on the main page, we need to setup a few things before we c
 - SSH Keys working between all nodes and your admin node (I use a mac).
 - Tested that you can SSH without a password into all 3 nodes.
 - Make sure each node has access to the Internet, so we can download packages and other stuff.
-- I like to call my nodes DEVx, so it might help if you stick to that (slightly boring) standard.
+- I like to call my nodes DEV1, DEV2 so it might help if you stick to that (slightly boring) standard.
 
 <div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
+    <b><a href="#top">↥ top</a>   |   <a href="../01_core_components/">next</a> </b>
 </div>
 <br/>
 
@@ -31,7 +31,7 @@ As we mentioned back on the main page, we need to setup a few things before we c
 I'll have to write up how to setup PyEnv for the MAC, but for now, you have to run away and have a go at getting that lot going before we start, otherwise you can just read along, but this isn't meant to be a spectator sport!
 
 <div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
+    <b><a href="#top">↥ top</a>   |   <a href="../01_core_components/">next</a> </b>
 </div>
 <br/>
 
@@ -46,7 +46,7 @@ Summary of steps:
 	- Run vagrant up --provision to restart the bootstrap file at any time.
 
 <div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
+    <b><a href="#top">↥ top</a>   |   <a href="../01_core_components/">next</a> </b>
 </div>
 <br/>
 
@@ -76,15 +76,15 @@ vagrant up
 I might include the STDOUT produced by the above commands, but for now lets just hope you managed to get it working! Just check connectivity between your laptop and the nodes, by establishing a new SSH session to all. Then in a separate terminal window you can carry on with the rest of the repo.
 
 <div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
+    <b><a href="#top">↥ top</a>   |   <a href="../01_core_components/">next</a> </b>
 </div>
 <br/>
 
-## Next Section [01](../01/)
+## Next Section [01 Core Components](../01_core_components//)
 OK, ground zero is completed, lets move onto the concepts!
 
 <div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
+    <b><a href="#top">↥ top</a>   |   <a href="../01_core_components/">next</a> </b>
 </div>
 <br/>
 

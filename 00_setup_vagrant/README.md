@@ -1,5 +1,15 @@
-# Part 00 - In the beginning..
+# In the beginning..
 Well you made it this far, well done!
+
+---
+
+- [In the beginning..](#in-the-beginning-)
+  	- [Introduction](#introduction)
+- [Dependencies](#dependencies)
+  	- [Setup the Stack](#setup-the-stack)
+  	- [Git clone - [Vagrant-Maker]](#git-clone-vagrant-maker)
+- [Test It Works](#test-it-works)
+- [Next Section - Core Components](#next-section-core-components)
 
 ## Introduction
 As we mentioned back on the main page, we need to setup a few things before we can follow along with the examples.  As I've already spent a good amount of time working with Vagrant we can just use a repo I already created to auto generate our test VM's.
@@ -43,7 +53,7 @@ Summary of steps:
 
 
 
-#### Git clone [Vagrant-Maker](https://github.com/asainsbury/vagrant-maker)
+#### Git clone - [Vagrant-Maker](https://github.com/asainsbury/vagrant-maker)
 Vagrant-maker does this:
 - Stands up 3 Centos VM's
 - Runs a bootstrap process to base line each node.
@@ -74,20 +84,28 @@ I might include the STDOUT produced by the above commands, but for now lets just
 <br/>
 
 # Test It Works
-Using this command, will test connectivity after you have stood up the VM's:
+Using this adhoc command, we can test connectivity after you have stood up the VM's:
 
 ```bash
 ansible dev -m ping -i ../01_core_components/hosts -u user
 ```
 
-Breaking That Down:
+__Breaking That Down:__
 
-- ansible:
+- *ansible*
 	- Define and run a single task 'playbook' against a set of hosts 
+- *dev*
+	- The group we want to use
+- *-m ping*
+	- is the ad hoc module, which is ping in this case
+- *-i Path_to_inventory_file*
+	- just using the inventory file from the next chapter
+- *-u user*
+	- We need to run the commands with a remote user variable, and we setup the hosts with "user"
 
 
 
-And product the following output:
+__And product the following output:__
 
 ```bash
 dev1 | SUCCESS => {
@@ -104,17 +122,14 @@ dev2 | SUCCESS => {
 }
 ```
 
-<strong>NOTE: </strong> Make sure you accept the host keys, when prompted, then after a couple of runs you will be able to run the command.
+<strong>NOTE: </strong> Make sure you accept the host keys, when prompted, then after a couple of runs you will be able to run the command.  This is because of the SSH Config file we setup earlier, whilst trying to make life easier..
 
-This is because of the SSH Config file we setup earlier..
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../01_core_components/">next</a> </b>
+</div>
+<br/>
 
-
-
-```
-
-```
-
-# Next Section [01 Core Components](../01_core_components//)
+# Next Section - [Core Components](../01_core_components//)
 OK, ground zero is completed, lets move onto the concepts!
 
 <div align="right">

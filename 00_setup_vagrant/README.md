@@ -1,5 +1,15 @@
-# Part 00 - In the beginning..
-Well you made it this far, well done!.
+# In the beginning..
+Well you made it this far, well done!
+
+---
+
+- [In the beginning..](#in-the-beginning-)
+  	- [Introduction](#introduction)
+- [Dependencies](#dependencies)
+  	- [Setup the Stack](#setup-the-stack)
+  	- [Git clone - [Vagrant-Maker]](#git-clone-vagrant-maker)
+- [Test It Works](#test-it-works)
+- [Next Section - Core Components](#next-section-core-components)
 
 ## Introduction
 As we mentioned back on the main page, we need to setup a few things before we can follow along with the examples.  As I've already spent a good amount of time working with Vagrant we can just use a repo I already created to auto generate our test VM's.
@@ -10,14 +20,14 @@ As we mentioned back on the main page, we need to setup a few things before we c
 - SSH Keys working between all nodes and your admin node (I use a mac).
 - Tested that you can SSH without a password into all 3 nodes.
 - Make sure each node has access to the Internet, so we can download packages and other stuff.
-- I like to call my nodes DEVx, so it might help if you stick to that (slightly boring) standard.
+- I like to call my nodes DEV1, DEV2 so it might help if you stick to that (slightly boring) standard.
 
 <div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
+    <b><a href="#top">↥ top</a>   |   <a href="../01_core_components/">next</a> </b>
 </div>
 <br/>
 
-### Dependencies
+# Dependencies
 <strong>IF</strong> you do want to follow along, using Vagrant, then make sure you do this:
 
 - Install Virtual box
@@ -30,12 +40,8 @@ As we mentioned back on the main page, we need to setup a few things before we c
 
 I'll have to write up how to setup PyEnv for the MAC, but for now, you have to run away and have a go at getting that lot going before we start, otherwise you can just read along, but this isn't meant to be a spectator sport!
 
-<div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
-</div>
-<br/>
 
-## Setup the Stack
+#### Setup the Stack
 Summary of steps:
 
 0. Complete all the dependencies as outlined above!! 
@@ -45,12 +51,9 @@ Summary of steps:
 4. Run ```vagrant up``` to spin up the 3 VM's
 	- Run vagrant up --provision to restart the bootstrap file at any time.
 
-<div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
-</div>
-<br/>
 
-### Git clone [Vagrant-Maker](https://github.com/asainsbury/vagrant-maker)
+
+#### Git clone - [Vagrant-Maker](https://github.com/asainsbury/vagrant-maker)
 Vagrant-maker does this:
 - Stands up 3 Centos VM's
 - Runs a bootstrap process to base line each node.
@@ -76,15 +79,61 @@ vagrant up
 I might include the STDOUT produced by the above commands, but for now lets just hope you managed to get it working! Just check connectivity between your laptop and the nodes, by establishing a new SSH session to all. Then in a separate terminal window you can carry on with the rest of the repo.
 
 <div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
+    <b><a href="#top">↥ top</a>   |   <a href="../01_core_components/">next</a> </b>
 </div>
 <br/>
 
-## Next Section [01](../01/)
+# Test It Works
+Using this adhoc command, we can test connectivity after you have stood up the VM's:
+
+```bash
+ansible dev -m ping -i ../01_core_components/hosts -u user
+```
+
+__Breaking That Down:__
+
+- *ansible*
+	- Define and run a single task 'playbook' against a set of hosts 
+- *dev*
+	- The group we want to use
+- *-m ping*
+	- is the ad hoc module, which is ping in this case
+- *-i Path_to_inventory_file*
+	- just using the inventory file from the next chapter
+- *-u user*
+	- We need to run the commands with a remote user variable, and we setup the hosts with "user"
+
+
+
+__And product the following output:__
+
+```bash
+dev1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+dev3 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+dev2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+```
+
+<strong>NOTE: </strong> Make sure you accept the host keys, when prompted, then after a couple of runs you will be able to run the command.  This is because of the SSH Config file we setup earlier, whilst trying to make life easier..
+
+<div align="right">
+    <b><a href="#top">↥ top</a>   |   <a href="../01_core_components/">next</a> </b>
+</div>
+<br/>
+
+# Next Section - [Core Components](../01_core_components//)
 OK, ground zero is completed, lets move onto the concepts!
 
 <div align="right">
-    <b><a href="#top">↥ top</a>   |   <a href="../">home</a>   |   <a href="../01">next</a> </b>
+    <b><a href="#top">↥ top</a>   |   <a href="../01_core_components/">next</a> </b>
 </div>
 <br/>
 
